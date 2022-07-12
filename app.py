@@ -13,6 +13,7 @@ def about():
 @app.route('/test_list')
 def test_list():
     colors = ["Red", "Blue", "Green"]
+    # dynamic mapping for Jinja 2 in test_list
     return render_template("test_list.html", colors=colors)
 
 if __name__ == '__main__':
