@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Flask Test Project</title>
-</head>
-<body bgcolor="#06c04e">
-<style>
-   li, p {
-    font-size: 240%;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #333366;
-   }
-</style>
-    <ul>
+{% extends 'base.html' %}
+{% block base %}
+     <ul>
         {% for color in colors %}
         <li>{{color}}</li>
         {% endfor %}
@@ -22,5 +10,6 @@
     {% else %}
     <p>Orange is not in the list.</p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
+
+
