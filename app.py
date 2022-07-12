@@ -10,6 +10,11 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route('/test_list')
+def test_list():
+    colors = ["Red", "Blue", "Green"]
+    return render_template("test_list.html", colors=colors)
+
 if __name__ == '__main__':
     app.run(debug=True, port=5005)
 
